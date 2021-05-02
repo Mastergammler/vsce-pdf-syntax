@@ -3,6 +3,7 @@
     "displayName": "pdf-syntax",
     "description": "Syntax highlighting for raw pdf files",
     "version": "0.0.1",
+    "publisher": "mg-local-test",
     "engines": {
         "vscode": "^1.46.0"
     },

@@ -7,3 +7,5 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 ## [Unreleased]
 
 - Initial release
+- Supports folding for streams
+- Supports syntax highlighting for obj, streams, obj references, strings, names
