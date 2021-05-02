@@ -1,0 +1,58 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "pdf-raw",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.control.pdfraw",
+					"match": "\\b(if|while|for|return)\\b"
+				},
+				{
+					"name":"keyword.control.object",
+					"match": "\\b(\\d* \\d* obj|endobj|\\d* \\d* R)\\b"
+				},
+				{
+					"name":"keyword.definition.stream",
+					"match": "\\b(stream|endstream|xref|trailer|startxref)\\b"
+				},
+				{
+					"name":"variable.other.enummember",
+					"match":"/\\w*"
+				},
+				{
+					"name":"keyword.control.dictionary",
+					"match": "(<<|>>|\\[|\\])"
+				},
+				{
+					"name":"comment.line.pdfraw",
+					"match": "%.*"
+				},
+				{
+					"name":"support.type.xref",
+					"match": "\\d{10} \\d{5} (f|n)"
+				}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.double.pdfraw",
+			"begin": "\\(",
+			"end": "(\\)|endstream)",
+			"patterns": [
+				{
+					"name": "constant.character.escape.pdfraw",
+					"match": "\\\\."
+				}
+			]
+		}
+	},
+	"scopeName": "pdf.raw"
+}

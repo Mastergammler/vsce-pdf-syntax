@@ -1,0 +1,25 @@
+{
+    "name": "pdf-syntax",
+    "displayName": "pdf-syntax",
+    "description": "Syntax highlighting for raw pdf files",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.46.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "pdfraw",
+            "aliases": ["pdf-raw", "pdfraw"],
+            "extensions": [".pdf"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "pdfraw",
+            "scopeName": "pdf.raw",
+            "path": "./syntaxes/pdfraw.tmLanguage.json"
+        }]
+    }
+}
